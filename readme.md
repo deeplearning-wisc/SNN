@@ -102,6 +102,8 @@ For Textures, we use the entire dataset, which can be downloaded from their
 
 Please put all downloaded OOD datasets into `./ood_data`.
 
+## TODO:ADD IN-100 Training code, Inference code and trained checkpoint.
+
 
 ## References
 The codebase is adapted from [knn-ood](https://github.com/deeplearning-wisc/knn-ood).
