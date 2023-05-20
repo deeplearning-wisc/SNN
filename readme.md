@@ -73,13 +73,28 @@ It is tested under Ubuntu Linux 20.04 and Python 3.8 environment, and requries s
 * [faiss](https://github.com/facebookresearch/faiss)
 
 ## Demo
+### 1. Demo code for training SNN on CIFAR benchmark
+
+To train DenseNet-101 on CIFAR-100 dataset with subspace learning, run the following command:
+
+```
+python train_densenet.py --id CIFAR-100 --bs 64 --r 0.25
+```
+Run the following command, to train ResNet-50 on CIFAR-100 dataset:
+
+```
+python train_resnet.py --id CIFAR-100 --bs 128 --r 0.05
+```
+
 
 ### 2. Demo code for testing SNN on CIFAR benchmark
+
+For inference, download the pre-trained models as mentioned above. To evaluate the OOD detection performance for a DenseNet model trained on CIFAR-100, run the following the command:
 
 ```
 python test_cifar.py --in-dataset CIFAR-100 --model_arch densenet --bs 200
 ```
-
+To run inference on a trained ResNet-50 model, run the following command:
 ```
 python test_cifar.py --in-dataset CIFAR-100 --model_arch resnet50 --bs 200
 ```
