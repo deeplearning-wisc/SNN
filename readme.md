@@ -104,4 +104,4 @@ Please put all downloaded OOD datasets into `./ood_data`.
 
 
 ## References
-The codebase are adapted from [knn-ood](https://github.com/deeplearning-wisc/knn-ood)
+The codebase is adapted from [knn-ood](https://github.com/deeplearning-wisc/knn-ood).
