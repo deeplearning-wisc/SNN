@@ -60,6 +60,9 @@ We provide links and instructions to download each dataset:
 
 [//]: # (```)
 
+### 3.  Pre-trained model
+
+Please download [Pre-trained models](https://drive.google.com/file/d/1SbUKIpkqy2KQqM_gx8uwpeKOsyCkYkTu/view?usp=share_link) and place in the `./checkpoints` folder for respective ID dataset and model architecture. For example: DenseNet-101 model trained on CIFAR-10 should be placed in `./checkpoints/CIFAR-10/densenet` folder.
 
 ## Preliminaries
 It is tested under Ubuntu Linux 20.04 and Python 3.8 environment, and requries some packages to be installed:
