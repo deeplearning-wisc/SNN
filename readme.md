@@ -101,3 +101,7 @@ For Textures, we use the entire dataset, which can be downloaded from their
 [original website](https://www.robots.ox.ac.uk/~vgg/data/dtd/).
 
 Please put all downloaded OOD datasets into `./ood_data`.
+
+
+## References
+The codebase are adapted from [knn-ood](https://github.com/deeplearning-wisc/knn-ood)
