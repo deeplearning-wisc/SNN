@@ -16,10 +16,6 @@ from run_snn import run_knn_func
 from pathlib import Path
 from types import MethodType
 
-def check_valid(path):
-    path = Path(path)
-    return not path.stem.startswith('._')
-
 def id_loader(args):
     in_dataset = args.in_dataset
     bs = args.bs
@@ -86,13 +82,13 @@ def get_out_loader(out_dataset, args):
     batch_size = args.bs
     transform = args.transform_test
     if out_dataset == 'SVHN':
-        testsetout = torchvision.datasets.SVHN('~/Documents/ood_data/', split='test', transform=transform, download=True)
+        testsetout = torchvision.datasets.SVHN('./ood_data/', split='test', transform=transform, download=True)
         testloaderOut = torch.utils.data.DataLoader(testsetout, batch_size=batch_size, shuffle=True, num_workers=2)
     elif out_dataset == 'dtd':
-        testsetout = torchvision.datasets.ImageFolder(root="~/Documents/ood_data/dtd/images", transform=transform)
+        testsetout = torchvision.datasets.ImageFolder(root="./ood_data/dtd/images", transform=transform)
         testloaderOut = torch.utils.data.DataLoader(testsetout, batch_size=batch_size, shuffle=True, num_workers=2)
     elif out_dataset == 'places365':
-        testsetout = torchvision.datasets.ImageFolder(root="~/Documents/ood_data/Places365/", transform=transform)
+        testsetout = torchvision.datasets.ImageFolder(root="./ood_data/Places365/", transform=transform)
         testloaderOut = torch.utils.data.DataLoader(testsetout, batch_size=batch_size, shuffle=True, num_workers=2)
     elif out_dataset == 'CIFAR-10':
         testsetout = torchvision.datasets.CIFAR10(root='./data', train=False, download=True, transform=transform)
@@ -101,7 +97,7 @@ def get_out_loader(out_dataset, args):
         testsetout = torchvision.datasets.CIFAR100(root='./data', train=False, download=True, transform=transform)
         testloaderOut = torch.utils.data.DataLoader(testsetout, batch_size=batch_size, shuffle=True, num_workers=2)
     else:
-        testsetout = torchvision.datasets.ImageFolder("~/Documents/ood_data/{}".format(out_dataset), transform=transform)
+        testsetout = torchvision.datasets.ImageFolder("./ood_data/{}".format(out_dataset), transform=transform)
         testloaderOut = torch.utils.data.DataLoader(testsetout, batch_size=batch_size, shuffle=True, num_workers=2)
     return testloaderOut
 
