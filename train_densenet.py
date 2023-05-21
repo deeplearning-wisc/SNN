@@ -53,7 +53,7 @@ parser.add_argument('--resume', default='', type=str,
                     help='path to latest checkpoint (default: none)')
 parser.add_argument('--name', default='DenseNet-101_cifar100', type=str,
                     help='name of experiment')
-parser.add_argument('--r', default=None, type=int, help='relevance ratio', required = True)
+parser.add_argument('--r', default=None, type=float, help='relevance ratio', required = True)
 
 parser.set_defaults(bottleneck=True)
 parser.set_defaults(augment=True)
