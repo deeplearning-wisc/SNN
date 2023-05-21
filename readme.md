@@ -73,16 +73,15 @@ python test_cifar.py --in-dataset CIFAR-100 --model_arch resnet50 --bs 200
 ```
 
 
-### 2. Dataset Preparation for Large-scale Experiment 
+### 2. Dataset Preparation for Large-scale Experiment (ImageNet-100)
 
 #### In-distribution dataset
 
-Please download [ImageNet-1k](http://www.image-net.org/challenges/LSVRC/2012/index) and place the training data and validation data in
-`./datasets/imagenet/train` and  `./datasets/imagenet/val`, respectively.
+For generating the ImageNet-100 dataset, please follow the steps given [here](https://github.com/danielchyeh/ImageNet-100-Pytorch) and save the dataset in `./IN-100` folder.
 
 #### Out-of-distribution dataset
 
-We have curated 4 OOD datasets from 
+We have 4 OOD datasets from 
 [iNaturalist](https://arxiv.org/pdf/1707.06642.pdf), 
 [SUN](https://vision.princeton.edu/projects/2010/SUN/paper.pdf), 
 [Places](http://places2.csail.mit.edu/PAMI_places.pdf), 
@@ -102,7 +101,15 @@ For Textures, we use the entire dataset, which can be downloaded from their
 
 Please put all downloaded OOD datasets into `./ood_data`.
 
-## TODO:ADD IN-100 Training code, Inference code and trained checkpoint.
+##### 1. Demo code for training SNN on Imagenet-100 benchmark
+
+To train ResNet-101 on ImageNet-100 dataset with subspace learning, run the following command:
+```
+python train_imagenet.py --classes 100 --r 0.35
+```
+##### 2. Demo code for testing SNN on Imagenet-100 benchmark
+
+
 
 
 ## References
