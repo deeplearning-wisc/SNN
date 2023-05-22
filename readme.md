@@ -109,8 +109,10 @@ python train_imagenet.py --classes 100 --r 0.35
 ```
 ##### 2. Demo code for testing SNN on Imagenet-100 benchmark
 
-
-
+The pretrained model can be downloaded from [here](https://drive.google.com/file/d/1SbUKIpkqy2KQqM_gx8uwpeKOsyCkYkTu/view?usp=share_link). After downloading, place the pre-trained model in the `./checkpoints` folder. For inference on ImageNet-100, run the following command:
+```
+python feat_extract_largescale.py
+```
 
 ## References
 The codebase is adapted from [knn-ood](https://github.com/deeplearning-wisc/knn-ood).
