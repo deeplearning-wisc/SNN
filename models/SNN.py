@@ -7,7 +7,7 @@ class SNN(nn.Linear):
         super(SNN, self).__init__(in_features, out_features, bias)
         self.r = r                #relevance ratio
         self.s = int(self.r * in_features)
-        print(f"Starting SNN training. Using subspace dimension = {self.s}")
+        print(f"Using subspace dimension = {self.s}")
         
     def forward(self, input):
         vote = input[:, None, :] * self.weight
