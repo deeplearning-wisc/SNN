@@ -42,7 +42,7 @@ We provide links and instructions to download each dataset:
 
 ####  Pre-trained model
 
-Please download [Pre-trained models](https://drive.google.com/file/d/1SbUKIpkqy2KQqM_gx8uwpeKOsyCkYkTu/view?usp=share_link) and place in the `./checkpoints` folder for respective ID dataset and model architecture. For example: DenseNet-101 model trained on CIFAR-10 should be placed in `./checkpoints/CIFAR-10/densenet` folder.
+Please download [Pre-trained models](https://drive.google.com/file/d/1YP1oFzm6cFTR19ckzkky0Zixn3VBz47A/view?usp=share_link) and place in the `./checkpoints` folder for respective ID dataset and model architecture. For example: DenseNet-101 model trained on CIFAR-10 should be placed in `./checkpoints/CIFAR-10/densenet` folder.
 
 
 #### Demo
@@ -109,7 +109,7 @@ python train_imagenet.py --classes 100 --r 0.35
 ```
 ##### 2. Demo code for testing SNN on Imagenet-100 benchmark
 
-The pretrained model can be downloaded from [here](https://drive.google.com/file/d/1SbUKIpkqy2KQqM_gx8uwpeKOsyCkYkTu/view?usp=share_link). After downloading, place the pre-trained model in the `./checkpoints` folder. For inference on ImageNet-100, run the following command:
+The pretrained model can be downloaded from [here](https://drive.google.com/file/d/1YP1oFzm6cFTR19ckzkky0Zixn3VBz47A/view?usp=share_link). After downloading, place the pre-trained model in the `./checkpoints` folder. For inference on ImageNet-100, run the following command:
 ```
 python feat_extract_largescale.py
 ```
